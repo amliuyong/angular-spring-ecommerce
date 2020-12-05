@@ -379,7 +379,12 @@ ng generate services services/product
 
 ```
 npm install bootstrap
-npm install @fortawesome
+
+ng add @angular/localize
+
+npm install @ng-bootstrap/ng-bootstrap
+
+npm install @fortawesome/fontawesome-free
 ```
 ```json
 
@@ -444,9 +449,11 @@ The basic syntax is:
 
 ## Service, Injectable, HttpClient
 
-`ng generate services services/product`
-`ng generate component components/product-list`
-`ng generate class common/product`
+- `ng generate services services/product`
+
+- `ng generate component components/product-list`
+
+- `ng generate class common/product`
 
 
 ## Service
@@ -554,6 +561,11 @@ interface GetResponseProductCategory {
 ```
 
 ## Component
+
+ng-bootstrap module
+  - pagination:  https://ng-bootstrap.github.io/#/components/pagination/overview
+  - import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 ```html
 <div class="main-content">
@@ -776,7 +788,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserModule,
     HttpClientModule,
-    NgbModule
+    NgbModule // ng-bootstrap module
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
